@@ -110,7 +110,7 @@ int strtoi(const char* str, char** p, int* ret)
 			}
 		}
 		// Handle dec base
-		else if ((*(str + i) >= '0' && *(str + i) <= '9') || (* (str + i) == '-' && i == 0))
+		else if ((*(str + i) >= '0' && *(str + i) <= '9') || (*(str + i) == '-' && i == 0))
 		{
 			if (*(str + i) == '-' && i == 0)
 			{
@@ -140,6 +140,7 @@ int strtoi(const char* str, char** p, int* ret)
 			}
 		}
 		else
+		// Set the minimum allowed value for binary 
 		{
 			index++;
 			*max_str = '1';

@@ -6,7 +6,7 @@
 int main(void)	
 {
 	int ret = 0, bufSize = 9, value = 1, opnum = 0, sysnum = 10, result = 1;
-	char* string = "b10010"; // String for strtoi
+	char* string = "b10000000000000000ddd00000000000000"; // String for strtoi
 	char* buf = (char*)calloc(bufSize, sizeof(char));
 	char* p = NULL;
 
@@ -19,7 +19,7 @@ int main(void)
 			printf_s("str to int: \'%s\' -> \'%d\'\n", string, ret);
 
 		else if (p != NULL)
-			printf_s("String:\'%s\' \nUnknown symbol: \'%c\'\n", string, p);	
+			printf_s("String: '%s'\nUnknown symbol: '%c'\n", string, p);
 
 		break;
 	case 2:
